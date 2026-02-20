@@ -4,6 +4,583 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
+
+    <link rel="stylesheet" href="src/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
-  <body></body>
+  <body class="bg-[#602A1D]">
+    <!-- The first page- the start button  -->
+    <div class="absolute top-2/4 left-2/4 translate-1/2 bg-[#F2E9E9] border-2">
+      <button>Start Quiz</button>
+    </div>
+
+    <div
+      class="absolute top-2/4 left-2/4 translate-1/2 w-135 bg-[#F2E9E9] border-4"
+    >
+      <div
+        class="h-15 w-full rounded-lg border-b border-gray-300 flex items-center px-9 font-medium text-2xl"
+      >
+        <span>Some Rules of this Quiz</span>
+      </div>
+
+      <div class="py-4 px-9">
+        <div class="my-4 text-[17px]">
+          1. You will have only
+          <span class="text-[#602A1D] font-semibold">15 seconds</span> per each
+          question
+        </div>
+        <div class="my-4 text-[17px]">
+          2. Once you select your answer, you can't reselect.
+        </div>
+        <div class="my-4 text-[17px]">
+          3. You can't select any option once time goes off.
+        </div>
+        <div class="my-4 text-[17px]">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="my-4 text-[17px]">
+          5. You'll get points on the basis of your correct answers.
+        </div>
+      </div>
+      <!-- quit and continue button -->
+      <div
+        class="h-16 flex items-center justify-end px-9 border-t border-gray-300"
+      >
+        <!-- mx-1.5 h-10 w-25 border border-gray-300 text-[#F2E9E9] font-medium text-[16px] cursor-pointer -->
+        <button class="">Exit Quiz</button>
+        <button>Continue</button>
+      </div>
+    </div>
+
+    <!-- the content in the quiz box, n0 1-50 -->
+    <div>
+      <header>
+        <div>Quiz Application</div>
+
+        <!-- timer -->
+        <div>
+          <div>Time Left</div>
+          <div>15</div>
+        </div>
+      </header>
+
+      <!-- No 1 -->
+      <section>
+        <div>
+          <span>What does HTML stand for?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span>Hyper Tool Markup Language</span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>Hyper Text Markup Language</span>
+            <div class="fas fa-check"></div>
+          </div>
+          <div>
+            <span>Hyper Text Multiple Language</span>
+          </div>
+          <div>
+            <span>Hyper Transfer Markup Language</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 2 -->
+      <section>
+        <div>
+          <span>Which language is used for styling web pages?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span>HTML</span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>JavaScript</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">CSS</span>
+          </div>
+          <div>
+            <span>PHP</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 3 -->
+      <section>
+        <div>
+          <span>Which language is used to add interactivity to a website?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span>JavaScript</span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>HTML</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">CSS</span>
+          </div>
+          <div>
+            <span>SQL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 4 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 5 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 6 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 7 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 8 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 9 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 10 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 11 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 12 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 13 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 14 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 15 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 16 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 17 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 18 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 19 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- No 20 -->
+      <section>
+        <div>
+          <span>Which symbol is used for comments in JavaScript?</span>
+        </div>
+        <!-- Option list -->
+        <div>
+          <div>
+            <span><!-- --></span>
+            <div class="fas fa-times"></div>
+          </div>
+          <div>
+            <span>//</span>
+            <div></div>
+          </div>
+          <div>
+            <span class="fas fa-check">\*\*</span>
+          </div>
+          <div>
+            <span>##</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer of quiz box -->
+      <footer>
+        <div>
+          <span
+            ><p>2</p>
+            of
+            <p>5</p>
+            Questions</span
+          >
+        </div>
+        <button>Next</button>
+      </footer>
+    </div>
+
+    <!-- crown result box -->
+    <div>
+      <div>
+        <i class="fas fa crown"></i>
+      </div>
+      <div>You've completed the Quiz</div>
+      <!-- Text score -->
+      <div>
+        <span
+          >and sorry, you got only
+          <p>2</p>
+          out of
+          <p>5</p></span
+        >
+      </div>
+      <div>
+        <button>Replay Quiz</button>
+        <button>Quit Quiz</button>
+      </div>
+    </div>
+  </body>
 </html>

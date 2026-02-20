@@ -1,0 +1,349 @@
+1. What does HTML stand for?
+   A. Hyper Tool Markup Language
+   B. Hyper Text Markup Language
+   C. Hyper Text Multiple Language
+   D. Hyper Transfer Markup Language
+   Answer: B
+
+2. Which language is used for styling web pages?
+   A. HTML
+   B. JavaScript
+   C. CSS
+   D. PHP
+   Answer: C
+
+3. Which language is used to add interactivity to a website?
+   A. HTML
+   B. CSS
+   C. JavaScript
+   D. SQL
+   Answer: C
+
+4. Which symbol is used for comments in JavaScript?
+   A. <!-- -->
+   B. //
+   C. \*\*
+   D. ##
+   Answer: B
+
+5. Which keyword is used to declare a variable in JavaScript?
+   A. var
+   B. let
+   C. const
+   D. All of the above
+   Answer: D
+
+6. Which data type is NOT in JavaScript?
+   A. String
+   B. Boolean
+   C. Float
+   D. Undefined
+   Answer: C
+
+7. What will typeof "Hello" return?
+   A. number
+   B. string
+   C. object
+   D. boolean
+   Answer: B
+
+8. Which operator is used to assign a value?
+   A. ==
+   B. ===
+   C. =
+   D. !=
+   Answer: C
+
+9. Which method displays a message box in JavaScript?
+   A. alert()
+   B. prompt()
+   C. console.log()
+   D. message()
+   Answer: A
+
+10. Which keyword is used for a function?
+    A. function
+    B. define
+    C. method
+    D. fun
+    Answer: A
+
+11. What does DOM stand for?
+    A. Document Object Model
+    B. Data Object Method
+    C. Digital Ordinance Model
+    D. Document Oriented Method
+    Answer: A
+
+12. Which method selects an element by ID?
+    A. getElementById()
+    B. querySelectorAll()
+    C. getElementsByClass()
+    D. selectById()
+    Answer: A
+
+13. Which loop runs at least once?
+    A. for loop
+    B. while loop
+    C. do…while loop
+    D. foreach loop
+    Answer: C
+
+14. Which symbol means “equal value and equal type”?
+    A. ==
+    B. =
+    C. ===
+    D. !=
+    Answer: C
+
+15. Which function converts string to number?
+    A. parseInt()
+    B. toString()
+    C. NumberToString()
+    D. convert()
+    Answer: A
+
+16. What is NaN?
+    A. Not a Number
+    B. New and Null
+    C. Name as Number
+    D. Number and Null
+    Answer: A
+
+17. Which array method adds an item to the end?
+    A. push()
+    B. pop()
+    C. shift()
+    D. unshift()
+    Answer: A
+
+18. Which array method removes last item?
+    A. push()
+    B. pop()
+    C. shift()
+    D. slice()
+    Answer: B
+
+19. Which keyword stops a loop?
+    A. stop
+    B. break
+    C. exit
+    D. return
+    Answer: B
+
+20. Which keyword skips one loop cycle?
+    A. skip
+    B. next
+    C. continue
+    D. pass
+    Answer: C
+
+21. Which symbol is used for OR operator?
+    A. &&
+    B. ||
+    C. !!
+    D. ??
+    Answer: B
+
+22. Which symbol is used for AND operator?
+    A. ||
+    B. &&
+    C. !=
+    D. ==
+    Answer: B
+
+23. What will 2 + "2" output?
+    A. 4
+    B. 22
+    C. NaN
+    D. Error
+    Answer: B
+
+24. Which is a correct function call?
+    A. myFunction[]
+    B. myFunction{}
+    C. myFunction()
+    D. myFunction<>
+    Answer: C
+
+25. Which event occurs when button is clicked?
+    A. onmouseover
+    B. onchange
+    C. onclick
+    D. onload
+    Answer: C
+
+26. Which keyword creates a constant?
+    A. var
+    B. let
+    C. const
+    D. static
+    Answer: C
+
+27. Which statement checks condition?
+    A. if
+    B. for
+    C. while
+    D. switch
+    Answer: A
+
+28. Which is NOT a loop?
+    A. for
+    B. while
+    C. switch
+    D. do…while
+    Answer: C
+
+29. Which tool prints to browser console?
+    A. alert()
+    B. console.log()
+    C. print()
+    D. write()
+    Answer: B
+
+30. Which company developed JavaScript?
+    A. Google
+    B. Microsoft
+    C. Netscape
+    D. Apple
+    Answer: C
+
+31. Which tag links JavaScript file?
+    A. <css>
+    B. <js>
+    C. <script>
+    D. <link>
+    Answer: C
+
+32. Which is a Boolean value?
+    A. "true"
+    B. true
+    C. 1
+    D. yes
+    Answer: B
+
+33. What does API stand for?
+    A. Application Programming Interface
+    B. Applied Program Internet
+    C. Application Process Input
+    D. Advanced Program Interface
+    Answer: A
+
+34. Which keyword returns a value from function?
+    A. stop
+    B. break
+    C. return
+    D. output
+    Answer: C
+
+35. Which method removes first array element?
+    A. shift()
+    B. pop()
+    C. slice()
+    D. push()
+    Answer: A
+
+36. Which is correct variable name?
+    A. 2name
+    B. my-name
+    C. myName
+    D. my name
+    Answer: C
+
+37. Which is NOT a data type?
+    A. String
+    B. Number
+    C. Boolean
+    D. Character
+    Answer: D
+
+38. What does JSON stand for?
+    A. Java Script Object Notation
+    B. Java Source Object Name
+    C. Java Standard Output Name
+    D. Java Script Online Network
+    Answer: A
+
+39. Which method converts object to JSON?
+    A. JSON.parse()
+    B. JSON.stringify()
+    C. JSON.convert()
+    D. JSON.object()
+    Answer: B
+
+40. Which method converts JSON to object?
+    A. JSON.parse()
+    B. JSON.stringify()
+    C. JSON.read()
+    D. JSON.open()
+    Answer: A
+
+41. Which symbol is used for NOT operator?
+    A. !
+    B. &&
+    C. ||
+    D. ==
+    Answer: A
+
+42. What does CSS stand for?
+    A. Computer Style Sheet
+    B. Creative Style Sheet
+    C. Cascading Style Sheet
+    D. Colorful Style Sheet
+    Answer: C
+
+43. Which keyword defines class?
+    A. object
+    B. class
+    C. model
+    D. struct
+    Answer: B
+
+44. Which keyword creates object?
+    A. make
+    B. new
+    C. create
+    D. object
+    Answer: B
+
+45. Which function asks user for input?
+    A. alert()
+    B. confirm()
+    C. prompt()
+    D. input()
+    Answer: C
+
+46. Which is correct array declaration?
+    A. var arr = {}
+    B. var arr = []
+    C. var arr = ()
+    D. var arr = <>
+    Answer: B
+
+47. Which keyword handles errors?
+    A. try
+    B. catch
+    C. finally
+    D. All of the above
+    Answer: D
+
+48. Which method rounds number down?
+    A. Math.round()
+    B. Math.ceil()
+    C. Math.floor()
+    D. Math.random()
+    Answer: C
+
+49. Which method generates random number?
+    A. Math.floor()
+    B. Math.random()
+    C. Math.max()
+    D. Math.min()
+    Answer: B
+
+50. Which statement is used for multiple choices?
+    A. if
+    B. else
+    C. switch
+    D. loop
+    Answer: C
