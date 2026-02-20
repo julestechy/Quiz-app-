@@ -208,12 +208,12 @@
     D. Apple
     Answer: C
 
-31. Which tag links JavaScript file?
-    A. <css>
-    B. <js>
-    C. <script>
-    D. <link>
-    Answer: C
+31. Which function is used to print output in the browser console?
+    A. alert()
+    B. console.log()
+    C. print()
+    D. message()
+Answer: B
 
 32. Which is a Boolean value?
     A. "true"
