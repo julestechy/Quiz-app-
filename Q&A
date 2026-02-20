@@ -168,10 +168,10 @@
 
 25. Which event occurs when button is clicked?
     A. onmouseover
-    B. onchange
+    B. onload
     C. onclick
-    D. onload
-    Answer: C
+    D. onchange
+    Answer: D
 
 26. Which keyword creates a constant?
     A. var
