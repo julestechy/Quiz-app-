@@ -11,20 +11,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+    </style>
   </head>
-  <body class="bg-[#602A1D]">
+  <body class="bg-[#602A1D] font-['Rubik']">
     <!-- The first page- the start button  -->
-    <div class="absolute top-2/4 left-2/4 translate-1/2 bg-[#F2E9E9] border-2">
-      <button>Start Quiz</button>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <button
+        class="font-medium text-2xl text-[#602A1D] py-4 px-8 outline-none border-none rounded-md bg-[#F2E9E9] cursor-pointer"
+      >
+        Start Quiz
+      </button>
     </div>
 
+    <!-- the second page - info page  -->
     <div
-      class="absolute top-2/4 left-2/4 translate-1/2 w-135 bg-[#F2E9E9] border-4"
+      id="info_box "
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-135 bg-[#F2E9E9] rounded-[5px] hidden"
     >
       <div
-        class="h-15 w-full rounded-lg border-b border-gray-300 flex items-center px-9 font-medium text-2xl"
+        id="info_list"
+        class="h-15 w-full border-b border-gray-300 flex items-center justify-center font-semibold text-[20px]"
       >
-        <span>Some Rules of this Quiz</span>
+        Some Rules of this Quiz
       </div>
 
       <div class="py-4 px-9">
@@ -46,1256 +56,121 @@
           5. You'll get points on the basis of your correct answers.
         </div>
       </div>
+
       <!-- quit and continue button -->
       <div
-        class="h-16 flex items-center justify-end px-9 border-t border-gray-300"
+        id="buttons"
+        class="h-15 flex items-center justify-end px-8.75 border-t border-gray-300"
       >
-        <!-- mx-1.5 h-10 w-25 border border-gray-300 text-[#F2E9E9] font-medium text-[16px] cursor-pointer -->
-        <button class="">Exit Quiz</button>
-        <button>Continue</button>
+        <button
+          class="mx-1.25 h-10 w-25 border-2 border-[#602A1D] bg-[#F2E9E9] rounded-[5px] text-[#602A1D] font-medium text-[16px] cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+        >
+          Exit Quiz
+        </button>
+        <button
+          class="mx-1.25 h-10 w-25 border border-[#602A1D] bg-[#602A1D] rounded-[5px] text-[#F2E9E9] font-medium text-[16px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#F2E9E9] hover:text-[#602A1D]"
+        >
+          Continue
+        </button>
       </div>
     </div>
 
     <!-- the content in the quiz box, n0 1-50 -->
-    <div>
-      <header>
-        <div>Quiz Application</div>
+    <div
+      id="Quiz_box "
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-137.5 bg-[#F2E9E9] rounded-[5px]"
+    >
+      <header
+        class="relative z-99 h-17.5 px-7.5 b-[#F2E9E9] flex items-center justify-between rounded-t-[5px] rounded-r-[5px] shadow-[0px_3px_5px_1px_rgba(0,0,0,0.1)]"
+      >
+        <div id="title" class="text-2xl font-semibold">Quiz Application</div>
 
         <!-- timer -->
-        <div>
-          <div>Time Left</div>
-          <div>15</div>
+        <div
+          class="flex items-center justify-between w-36.25 h-11.25 bg-[#b37869] border-2 border-[#602A1D] rounded-[5px] px-2"
+        >
+          <div class="font-normal text-[17px] select-none">Time Left</div>
+          <div
+            class="text-[15px] font-medium bg-[#602A1D] h-7.5 w-11.25 text-[#F2E9E9] leading-7.5 rounded-[5px] select-none px-3.5"
+          >
+            15
+          </div>
         </div>
       </header>
 
       <!-- No 1 -->
-      <section>
-        <div>
+      <section class="p-[25px_30px_20px_30px]">
+        <div id="questionText" class="text-2xl font-semibold mb-4">
           <span>What does HTML stand for?</span>
         </div>
+
         <!-- Option list -->
-        <div>
-          <div>
+        <div id="optionList" class="p-[20px 0] block">
+          <div
+            id="option"
+            class="bg-[#b37869] border-2 border-[#602A1D] rounded-[5px] p-[8px_15px] mb-4 flex items-center justify-between cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+          >
             <span>Hyper Tool Markup Language</span>
-            <div class="fas fa-times"></div>
+            <div
+              id="iconCross"
+              class="h-6 w-6 bg-red-300 text-red-800 rounded-[50%] border-2 border-red-800 flex items-center justify-center text-[13px] pointer-events-none"
+            >
+              <i class="fas fa-times"></i>
+            </div>
           </div>
-          <div>
+          <div
+            id="option"
+            class="bg-[#b37869] border-2 border-[#602A1D] rounded-[5px] p-[8px_15px] mb-4 flex items-center justify-between cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+          >
             <span>Hyper Text Markup Language</span>
-            <div class="fas fa-check"></div>
+            <div
+              id="iconTick"
+              class="h-6 w-6 bg-green-300 text-green-800 rounded-[50%] border-2 border-green-800 flex items-center justify-center text-[13px] pointer-events-none"
+            >
+              <i class="fas fa-check"></i>
+            </div>
           </div>
-          <div>
+          <div
+            id="option"
+            class="bg-[#b37869] border-2 border-[#602A1D] rounded-[5px] p-[8px_15px] mb-4 flex items-center justify-between cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+          >
             <span>Hyper Text Multiple Language</span>
           </div>
-          <div>
+          <div
+            id="option"
+            class="bg-[#b37869] border-2 border-[#602A1D] rounded-[5px] p-[8px_15px] mb-0 flex items-center justify-between cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+          >
             <span>Hyper Transfer Markup Language</span>
           </div>
         </div>
       </section>
 
-      <!-- No 2 -->
-      <section>
-        <div>
-          <span>Which language is used for styling web pages?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>HTML</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>JavaScript</span>
-          </div>
-          <div>
-            <span>CSS</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>PHP</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 3 -->
-      <section>
-        <div>
-          <span>Which language is used to add interactivity to a website?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>JavaScript</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>HTML</span>
-          </div>
-          <div>
-            <span>CSS</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>SQL</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 4 -->
-      <section>
-        <div>
-          <span>Which symbol is used for comments in JavaScript?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span><!-- --></span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>//</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>\*\*</span>
-          </div>
-          <div>
-            <span>##</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 5 -->
-      <section>
-        <div>
-          <span
-            >Which keyword is used to declare a variable in JavaScript?</span
-          >
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>var</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>let</span>
-          </div>
-          <div>
-            <span>const</span>
-          </div>
-          <div>
-            <span>All of the above</span>
-            <div class="fas fa-check"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 6 -->
-      <section>
-        <div>
-          <span>Which data type is NOT in JavaScript?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>String</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Boolean</span>
-          </div>
-          <div>
-            <span>Float</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Undefined</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 7 -->
-      <section>
-        <div>
-          <span>What will typeof "Hello" return?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>number</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>string</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>object</span>
-          </div>
-          <div>
-            <span>boolean</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 8 -->
-      <section>
-        <div>
-          <span>Which operator is used to assign a value?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>==</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>===</span>
-          </div>
-          <div>
-            <span>=</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>!=</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 9 -->
-      <section>
-        <div>
-          <span>Which method displays a message box in JavaScript?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>alert()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>prompt()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>console.log()</span>
-          </div>
-          <div>
-            <span>message()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 10 -->
-      <section>
-        <div>
-          <span>Which keyword is used for a function?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>function</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>define</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>method</span>
-          </div>
-          <div>
-            <span>fun</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 11 -->
-      <section>
-        <div>
-          <span>What does DOM stand for?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Document Object Model</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Data Object Method</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Digital Ordinance Model</span>
-          </div>
-          <div>
-            <span>Document Oriented Method</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 12 -->
-      <section>
-        <div>
-          <span>Which method selects an element by ID?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>getElementById()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>querySelectorAll()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>getElementsByClass()</span>
-          </div>
-          <div>
-            <span>selectById()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 13 -->
-      <section>
-        <div>
-          <span>Which loop runs at least once?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>for loop</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>while loop</span>
-          </div>
-          <div>
-            <span>do…while loop</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>foreach loop</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 14 -->
-      <section>
-        <div>
-          <span>Which symbol means “equal value and equal type”?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>==</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>=</span>
-          </div>
-          <div>
-            <span>===</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>!=</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 15 -->
-      <section>
-        <div>
-          <span>Which function converts string to number?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>parseInt()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>toString()</span>
-          </div>
-          <div>
-            <span>NumberToString()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>convert()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 16 -->
-      <section>
-        <div>
-          <span>What is NaN?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Not a Number</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>New and Null</span>
-          </div>
-          <div>
-            <span>Name as Number</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Number and Null</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 17 -->
-      <section>
-        <div>
-          <span>Which array method adds an item to the end?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>push()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>pop()</span>
-          </div>
-          <div>
-            <span>shift()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>unshift()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 18 -->
-      <section>
-        <div>
-          <span>Which array method removes last item?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>push()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>pop()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>shift()</span>
-          </div>
-          <div>
-            <span>slice()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 19 -->
-      <section>
-        <div>
-          <span>Which keyword stops a loop?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>stop</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>break</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>exit</span>
-          </div>
-          <div>
-            <span>return</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 20 -->
-      <section>
-        <div>
-          <span>Which keyword skips one loop cycle?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>skip</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>next</span>
-          </div>
-          <div>
-            <span>continue</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>pass</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 21 -->
-      <section>
-        <div>
-          <span>Which symbol is used for OR operator?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span> &&</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span> ||</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span> !!</span>
-          </div>
-          <div>
-            <span> ??</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 22 -->
-      <section>
-        <div>
-          <span>Which symbol is used for AND operator?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>||</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>&&</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>!=</span>
-          </div>
-          <div>
-            <span>==</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 23 -->
-      <section>
-        <div>
-          <span>What will 2 + "2" output?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span> 4</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>22</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>NaN</span>
-          </div>
-          <div>
-            <span>Error</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 24 -->
-      <section>
-        <div>
-          <span>Which is a correct function call? </span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>myFunction[] </span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>myFunction{} </span>
-          </div>
-          <div>
-            <span>myFunction() </span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>myFunction<> </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 25 -->
-      <section>
-        <div>
-          <span>Which event occurs when button is clicked?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>onmouseover</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>onload</span>
-          </div>
-          <div>
-            <span>onclick</span>
-          </div>
-          <div>
-            <span>onchange</span>
-            <div class="fas fa-check"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 26 -->
-      <section>
-        <div>
-          <span>Which keyword creates a constant?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>var</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>let</span>
-          </div>
-          <div>
-            <span>const</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>static</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 27 -->
-      <section>
-        <div>
-          <span> Which statement checks condition?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>if</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>for</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>while</span>
-          </div>
-          <div>
-            <span>switch</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 28 -->
-      <section>
-        <div>
-          <span>Which is NOT a loop?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>for</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>while</span>
-          </div>
-          <div>
-            <span>switch</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>do…while</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 29 -->
-      <section>
-        <div>
-          <span>Which tool prints to browser console?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>alert()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>console.log()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>print()</span>
-          </div>
-          <div>
-            <span>write()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 30 -->
-      <section>
-        <div>
-          <span>Which company developed JavaScript?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Google</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Microsoft</span>
-          </div>
-          <div>
-            <span>Netscape</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Apple</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 31 -->
-      <section>
-        <div>
-          <span
-            >Which function is used to print output in the browser
-            console?</span
-          >
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>alert()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>console.log()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>print()</span>
-          </div>
-          <div>
-            <span>message()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 32 -->
-      <section>
-        <div>
-          <span>Which is a Boolean value?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>"true"</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>true</span>
-            <div class="fas fa-check"></div>
-          </div>
-        </div>
-        <div>
-          <span>1</span>
-
-          <div>
-            <span>yes</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 33 -->
-      <section>
-        <div>
-          <span>What does API stand for?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Application Programming Interface</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Applied Program Internet</span>
-          </div>
-          <div>
-            <span>Application Process Input</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Advanced Program Interface</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 34 -->
-      <section>
-        <div>
-          <span>Which keyword returns a value from function?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>stop</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>break</span>
-          </div>
-          <div>
-            <span>return</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>output</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 35 -->
-      <section>
-        <div>
-          <span> Which method removes first array element?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>shift()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>pop()</span>
-          </div>
-          <div>
-            <span>slice()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>push()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 36 -->
-      <section>
-        <div>
-          <span>Which is correct variable name?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>2name</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span> my-name</span>
-          </div>
-          <div>
-            <span>myName</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>my name</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 37 -->
-      <section>
-        <div>
-          <span>Which is NOT a data type??</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>String</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Number</span>
-          </div>
-          <div>
-            <span>Boolean</span>
-          </div>
-          <div>
-            <span>Character</span>
-            <div class="fas fa-check"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 38 -->
-      <section>
-        <div>
-          <span>What does JSON stand for?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>A. Java Script Object Notation</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>B. Java Source Object Name</span>
-          </div>
-          <div>
-            <span>C. Java Standard Output Name</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>D. Java Script Online Network</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 39 -->
-      <section>
-        <div>
-          <span>Which method converts object to JSON?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>JSON.parse()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>JSON.stringify()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>JSON.convert()</span>
-          </div>
-          <div>
-            <span>JSON.object()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 40 -->
-      <section>
-        <div>
-          <span>Which method converts JSON to object?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>JSON.parse()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>JSON.stringify()</span>
-          </div>
-          <div>
-            <span>JSON.read()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>JSON.open()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 41 -->
-      <section>
-        <div>
-          <span>Which symbol is used for NOT operator?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>!</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>&&</span>
-          </div>
-          <div>
-            <span>||</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>==</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 42 -->
-      <section>
-        <div>
-          <span>What does CSS stand for?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Computer Style Sheet</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Creative Style Sheet</span>
-          </div>
-          <div>
-            <span>Cascading Style Sheet</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Colorful Style Sheet</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 43 -->
-      <section>
-        <div>
-          <span>Which keyword defines class?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>object</span>
-          </div>
-          <div>
-            <span>class</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>model</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>struct</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 44 -->
-      <section>
-        <div>
-          <span>Which keyword creates object?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>make</span>
-          </div>
-          <div>
-            <span>new</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>create</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>object</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 45 -->
-      <section>
-        <div>
-          <span>Which function asks user for input?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>alert()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>confirm()</span>
-          </div>
-          <div>
-            <span>prompt()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>input()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 46 -->
-      <section>
-        <div>
-          <span>Which is correct array declaration? </span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>var arr = {} </span>
-          </div>
-          <div>
-            <span>var arr = [] </span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>var arr = () </span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>var arr = <> </span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 47 -->
-      <section>
-        <div>
-          <span>Which keyword handles errors?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>try</span>
-          </div>
-          <div>
-            <span>catch</span>
-          </div>
-          <div>
-            <span>finally</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>All of the above</span>
-            <div class="fas fa-check"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 48 -->
-      <section>
-        <div>
-          <span>Which method rounds number down?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Math.round()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Math.ceil()</span>
-          </div>
-          <div>
-            <span> Math.floor()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Math.random()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 49 -->
-      <section>
-        <div>
-          <span>Which method generates random number?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>Math.floor()</span>
-          </div>
-          <div>
-            <span>Math.random()</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>Math.max()</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>Math.min()</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- No 50 -->
-      <section>
-        <div>
-          <span>Which statement is used for multiple choices?</span>
-        </div>
-        <!-- Option list -->
-        <div>
-          <div>
-            <span>if</span>
-            <div class="fas fa-times"></div>
-          </div>
-          <div>
-            <span>else</span>
-          </div>
-          <div>
-            <span>switch</span>
-            <div class="fas fa-check"></div>
-          </div>
-          <div>
-            <span>loop</span>
-          </div>
-        </div>
-      </section>
-
       <!-- footer of quiz box -->
-      <footer>
+      <footer class="h-15 w-full px-[30px] flex items-center justify-between">
         <div>
-          <span
-            ><p>2</p>
+          <span class="flex gap-1 select-none"
+            ><p class="font-medium pr-[5px]">1</p>
             of
-            <p>5</p>
+            <p class="font-medium px-[5px]">50</p>
             Questions</span
           >
         </div>
-        <button>Next</button>
+        <button
+          class="h-[40px] px-[13px] font-normal outline-none border-none bg-[#602A1D] text-[#F2E9E9] rounded-[5px]"
+        >
+          Next
+        </button>
       </footer>
     </div>
 
     <!-- crown result box -->
-    <div>
+    <!-- <div>
       <div>
         <i class="fas fa crown"></i>
       </div>
-      <div>You've completed the Quiz</div>
-      <!-- Text score -->
-      <div>
+      <div>You've completed the Quiz</div> -->
+    <!-- Text score -->
+    <!-- <div>
         <span
           >and sorry, you got only
           <p>2</p>
@@ -1306,7 +181,7 @@
       <div>
         <button>Replay Quiz</button>
         <button>Quit Quiz</button>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </body>
 </html>
