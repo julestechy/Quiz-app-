@@ -19,7 +19,7 @@
     <!-- The first page- the start button  -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <button
-        class="font-medium text-2xl text-[#602A1D] py-4 px-8 outline-none border-none rounded-md bg-[#F2E9E9] cursor-pointer"
+        class="font-medium text-2xl text-[#602A1D] py-4 px-8 outline-none border-none rounded-md bg-[#F2E9E9] cursor-pointer shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
       >
         Start Quiz
       </button>
@@ -27,8 +27,8 @@
 
     <!-- the second page - info page  -->
     <div
-      id="info_box "
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-135 bg-[#F2E9E9] rounded-[5px] hidden"
+      id="info_box"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-135 bg-[#F2E9E9] rounded-[5px] opacity-0 pointer-events-none scale-[0.9] shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
     >
       <div
         id="info_list"
@@ -68,7 +68,7 @@
           Exit Quiz
         </button>
         <button
-          class="mx-1.25 h-10 w-25 border border-[#602A1D] bg-[#602A1D] rounded-[5px] text-[#F2E9E9] font-medium text-[16px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#F2E9E9] hover:text-[#602A1D]"
+          class="mx-1.25 h-10 w-25 border-2 border-[#602A1D] bg-[#602A1D] rounded-[5px] text-[#F2E9E9] font-medium text-[16px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#F2E9E9] hover:text-[#602A1D]"
         >
           Continue
         </button>
@@ -77,8 +77,8 @@
 
     <!-- the content in the quiz box, n0 1-50 -->
     <div
-      id="Quiz_box "
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-137.5 bg-[#F2E9E9] rounded-[5px]"
+      id="Quizbox"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-137.5 bg-[#F2E9E9] rounded-[5px] opacity-0 pointer-events-none scale-[0.9] shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
     >
       <header
         class="relative z-99 h-17.5 px-7.5 b-[#F2E9E9] flex items-center justify-between rounded-t-[5px] rounded-r-[5px] shadow-[0px_3px_5px_1px_rgba(0,0,0,0.1)]"
@@ -156,7 +156,7 @@
           >
         </div>
         <button
-          class="h-[40px] px-[13px] font-normal outline-none border-none bg-[#602A1D] text-[#F2E9E9] rounded-[5px]"
+          class="h-[40px] px-[13px] font-normal bg-[#602A1D] text-[#F2E9E9] rounded-[5px] cursor-pointer hover:bg-[#844d3f]"
         >
           Next
         </button>
@@ -164,24 +164,40 @@
     </div>
 
     <!-- crown result box -->
-    <!-- <div>
-      <div>
-        <i class="fas fa crown"></i>
+    <div
+      id="resultBox"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#F2E9E9] w-[450px] py-[25px] px-[30px] rounded-[5px] flex flex-col text-center opacity-0 pointer-events-none scale-[0.9] shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
+    >
+      <div id="icon" class="text-[80px] text-[#602A1D] mb-[10px]">
+        <i class="fas fa-crown"></i>
       </div>
-      <div>You've completed the Quiz</div> -->
-    <!-- Text score -->
-    <!-- <div>
-        <span
+
+      <div id="completed" class="text-[20px] font-medium">
+        You've completed the Quiz
+      </div>
+
+      <div id="textScore">
+        <span class="flex justify-center my-[10px] text-[18px] font-medium"
           >and sorry, you got only
-          <p>2</p>
+          <p class="font-semibold px-[4px]">20</p>
           out of
-          <p>5</p></span
+          <p class="font-semibold px-[4px]">50</p></span
         >
       </div>
-      <div>
-        <button>Replay Quiz</button>
-        <button>Quit Quiz</button>
-      </div> -->
-    <!-- </div> -->
+      <div class="my-[20px]">
+        <button
+          id="restart"
+          class="bg-[#602A1D] text-[#F2E9E9] mx-[10px] h-[45px] px-5 text-[15px] font-medium rounded-[5px] border-2 border-[#602A1D] cursor-pointer hover:text-[#602A1D] hover:bg-[#F2E9E9] transition-all duration-300 ease-in-out"
+        >
+          Replay Quiz
+        </button>
+        <button
+          id="quit"
+          class="text-[#602A1D] bg-[#F2E9E9] mx-[10px] h-[45px] px-5 text-[15px] font-medium rounded-[5px] border-2 border-[#602A1D] cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
+        >
+          Quit Quiz
+        </button>
+      </div>
+    </div>
   </body>
 </html>
