@@ -1,4 +1,3 @@
-// ====== SELECT ELEMENTS ======
 const startBtn = document.getElementById("startBtn");
 const infoBox = document.getElementById("infoBox");
 const quizBox = document.getElementById("quizBox");
@@ -12,7 +11,6 @@ const restartBtn = document.getElementById("restartBtn");
 const quitBtn = document.getElementById("quitBtn");
 const textScore = document.getElementById("textScore");
 
-// ====== ALL 50 QUESTIONS ======
 const questions = [
   {
     question: "What does HTML stand for?",
@@ -413,6 +411,7 @@ function showQuestion(index) {
 function selectOption(selectedOption, index) {
   if (optionSelected) return;
   optionSelected = true;
+  clearInterval(timerInterval);
 
   const correctAnswer = questions[currentQuestion].answer;
   const options = document.querySelectorAll(".option");
