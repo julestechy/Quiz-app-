@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="src/output.css" />
 
-    <script src="script.js"></script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -21,6 +19,7 @@
     <!-- The first page- the start button  -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
       <button
+        id="startBtn"
         class="font-medium text-2xl text-[#602A1D] py-4 px-8 outline-none border-none rounded-md bg-[#F2E9E9] cursor-pointer shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
       >
         Start Quiz
@@ -29,7 +28,7 @@
 
     <!-- the second page - info page  -->
     <div
-      id="infobBox"
+      id="infoBox"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-135 bg-[#F2E9E9] rounded-[5px] opacity-0 pointer-events-none scale-[0.9] shadow-[0px_4px_8px_0_rgba(0,0,0,0.2),0px_6px_20px_0_rgba(0,0,0,0.19)]"
     >
       <div
@@ -65,11 +64,13 @@
         class="h-15 flex items-center justify-end px-8.75 border-t border-gray-300"
       >
         <button
+          id="exitBtn"
           class="mx-1.25 h-10 w-25 border-2 border-[#602A1D] bg-[#F2E9E9] rounded-[5px] text-[#602A1D] font-medium text-[16px] cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
         >
           Exit Quiz
         </button>
         <button
+          id="continueBtn"
           class="mx-1.25 h-10 w-25 border-2 border-[#602A1D] bg-[#602A1D] rounded-[5px] text-[#F2E9E9] font-medium text-[16px] cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#F2E9E9] hover:text-[#602A1D]"
         >
           Continue
@@ -93,6 +94,7 @@
         >
           <div class="font-normal text-[17px] select-none">Time Left</div>
           <div
+            id="timerDisplay"
             class="text-[15px] font-medium bg-[#602A1D] h-7.5 w-11.25 text-[#F2E9E9] leading-7.5 rounded-[5px] select-none px-3.5"
           >
             15
@@ -152,6 +154,7 @@
           >
         </div>
         <button
+          id="nextBtn"
           class="h-[40px] px-[13px] font-normal bg-[#602A1D] text-[#F2E9E9] rounded-[5px] cursor-pointer hover:bg-[#844d3f]"
         >
           Next
@@ -182,18 +185,20 @@
       </div>
       <div class="my-[20px]">
         <button
-          id="restart"
+          id="restartBtn"
           class="bg-[#602A1D] text-[#F2E9E9] mx-[10px] h-[45px] px-5 text-[15px] font-medium rounded-[5px] border-2 border-[#602A1D] cursor-pointer hover:text-[#602A1D] hover:bg-[#F2E9E9] transition-all duration-300 ease-in-out"
         >
           Replay Quiz
         </button>
         <button
-          id="quit"
+          id="quitBtn"
           class="text-[#602A1D] bg-[#F2E9E9] mx-[10px] h-[45px] px-5 text-[15px] font-medium rounded-[5px] border-2 border-[#602A1D] cursor-pointer hover:bg-[#602A1D] hover:text-[#F2E9E9] transition-all duration-300 ease-in-out"
         >
           Quit Quiz
         </button>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
