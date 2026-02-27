@@ -313,7 +313,7 @@ let currentQuestion = 0;
 let score = 0;
 let optionSelected = false;
 let timerInterval = null;
-let timeLeft = 15;
+let timeLeft = 30;
 
 startBtn.addEventListener("click", () => {
   infoBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
@@ -333,7 +333,7 @@ continueBtn.addEventListener("click", () => {
 
 function startTimer() {
   clearInterval(timerInterval);
-  timeLeft = 15;
+  timeLeft = 30;
 
   const timerDisplay = document.getElementById("timerDisplay");
   timerDisplay.textContent = timeLeft;
@@ -411,19 +411,22 @@ function selectOption(selectedOption, index) {
 
   options.forEach((opt, i) => {
     opt.style.pointerEvents = "none";
-
-    if (i === correctAnswer) {
-      opt.classList.remove("bg-[#b37869]");
-      opt.classList.add("bg-green-300");
-      opt.querySelector(".iconTick").classList.remove("hidden");
-    }
-
-    if (i === index && index !== correctAnswer) {
-      opt.classList.remove("bg-[#b37869]");
-      opt.classList.add("bg-red-300");
-      opt.querySelector(".iconCross").classList.remove("hidden");
-    }
   });
+  setTimeout(() => {
+    options.forEach((opt, i) => {
+      if (i === correctAnswer) {
+        opt.classList.remove("bg-[#b37869]");
+        opt.classList.add("bg-green-300");
+        opt.querySelector(".iconTick").classList.remove("hidden");
+      }
+
+      if (i === index && index !== correctAnswer) {
+        opt.classList.remove("bg-[#b37869]");
+        opt.classList.add("bg-red-300");
+        opt.querySelector(".iconCross").classList.remove("hidden");
+      }
+    });
+  }, 500);
 
   if (index === correctAnswer) score++;
 }
@@ -448,14 +451,9 @@ function showResult() {
   quizBox.classList.add("opacity-0", "pointer-events-none", "scale-[0.9]");
   resultBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
 
-  const message =
-    score >= questions.length / 2
-      ? "Great job! You got"
-      : "Sorry, you got only";
-
   textScore.innerHTML = `
     <span class="flex justify-center my-[10px] text-[18px] font-medium">
-      ${message} <p class="font-semibold px-[4px]">${score}</p> out of <p class="font-semibold px-[4px]">${questions.length}</p>
+      You got <p class="font-semibold px-[4px]">${score}</p> out of <p class="font-semibold px-[4px]">${questions.length}</p>
     </span>
   `;
 }
