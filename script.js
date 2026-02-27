@@ -309,24 +309,20 @@ const questions = [
   },
 ];
 
-// ====== VARIABLES ======
 let currentQuestion = 0;
 let score = 0;
 let optionSelected = false;
 let timerInterval = null;
 let timeLeft = 15;
 
-// ====== START QUIZ ======
 startBtn.addEventListener("click", () => {
   infoBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
 });
 
-// ====== EXIT QUIZ ======
 exitBtn.addEventListener("click", () => {
   infoBox.classList.add("opacity-0", "pointer-events-none", "scale-[0.9]");
 });
 
-// ====== CONTINUE QUIZ ======
 continueBtn.addEventListener("click", () => {
   infoBox.classList.add("opacity-0", "pointer-events-none", "scale-[0.9]");
   quizBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
@@ -335,7 +331,6 @@ continueBtn.addEventListener("click", () => {
   showQuestion(currentQuestion);
 });
 
-// ====== TIMER ======
 function startTimer() {
   clearInterval(timerInterval);
   timeLeft = 15;
@@ -371,7 +366,6 @@ function startTimer() {
   }, 1000);
 }
 
-// ====== SHOW QUESTION ======
 function showQuestion(index) {
   optionSelected = false;
   const q = questions[index];
@@ -407,7 +401,6 @@ function showQuestion(index) {
   startTimer();
 }
 
-// ====== SELECT OPTION ======
 function selectOption(selectedOption, index) {
   if (optionSelected) return;
   optionSelected = true;
@@ -435,7 +428,6 @@ function selectOption(selectedOption, index) {
   if (index === correctAnswer) score++;
 }
 
-// ====== NEXT BUTTON ======
 nextBtn.addEventListener("click", () => {
   if (!optionSelected) {
     alert("Please select an answer first!");
@@ -452,7 +444,6 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// ====== SHOW RESULT ======
 function showResult() {
   quizBox.classList.add("opacity-0", "pointer-events-none", "scale-[0.9]");
   resultBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
@@ -469,7 +460,6 @@ function showResult() {
   `;
 }
 
-// ====== RESTART QUIZ ======
 restartBtn.addEventListener("click", () => {
   resultBox.classList.add("opacity-0", "pointer-events-none", "scale-[0.9]");
   quizBox.classList.remove("opacity-0", "pointer-events-none", "scale-[0.9]");
@@ -478,7 +468,6 @@ restartBtn.addEventListener("click", () => {
   showQuestion(currentQuestion);
 });
 
-// ====== QUIT QUIZ ======
 quitBtn.addEventListener("click", () => {
   window.location.reload();
 });
